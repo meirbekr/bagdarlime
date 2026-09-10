@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Primary Meta Tags -->
+  <title>BagdarLime — Разработка ПО, автоматизация бизнеса и внедрение ИИ в Казахстане</title>
+  <meta name="title" content="BagdarLime — Разработка ПО, автоматизация бизнеса и внедрение ИИ в Казахстане">
+  <meta name="description" content="Создаем веб-сайты любой сложности, мобильные приложения iOS/Android, специализированное ПО, автоматизируем CRM/ERP и внедряем ИИ-решения для бизнеса под ключ. г. Астана, работаем по всему Казахстану.">
+  <meta name="keywords" content="разработка сайтов Астана, разработка ПО Казахстан, внедрение ИИ для бизнеса, автоматизация CRM, мобильные приложения iOS Android, BagdarLime, IT компания Астана, AI решения">
+  <meta name="author" content="BagdarLime">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0B0F17">
+
+  <!-- Open Graph / WhatsApp / Telegram / Social Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bagdarlime.kz/">
+  <meta property="og:title" content="BagdarLime — IT & AI Решения для вашего бизнеса">
+  <meta property="og:description" content="Разработка сайтов, мобильных приложений, автоматизация процессов и внедрение искусственного интеллекта в Астане и Казахстане.">
+  <meta property="og:image" content="./public/og-banner.svg">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="BagdarLime">
+
+  <!-- Twitter Meta -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BagdarLime — Разработка ПО и ИИ в Казахстане">
+  <meta name="twitter:description" content="Комплексные IT и AI решения для масштабирования бизнеса. Офис в Астане, работа по всему Казахстану.">
+  <meta name="twitter:image" content="./public/og-banner.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./public/favicon.svg">
+  <link rel="apple-touch-icon" href="./public/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark: {
+              950: '#070A0F',
+              900: '#0B0F17',
+              850: '#0F141E',
+              800: '#141B27',
+              700: '#1E2738',
+              600: '#2A364D'
+            },
+            lime: {
+              neon: '#00FF87',
+              accent: '#10B981',
+              glow: 'rgba(0, 255, 135, 0.15)',
+              glowStrong: 'rgba(0, 255, 135, 0.35)'
+            }
+          },
+          fontFamily: {
+            sans: ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          boxShadow: {
+            'neon': '0 0 25px -5px rgba(0, 255, 135, 0.35)',
+            'neon-lg': '0 0 45px -5px rgba(0, 255, 135, 0.45)',
+            'card-glow': '0 0 30px -10px rgba(0, 255, 135, 0.15)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- High-Tech Custom Styling -->
+  <style>
+    /* Custom High-Tech Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #070A0F;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1E2738;
+      border-radius: 4px;
+      border: 1px solid rgba(0, 255, 135, 0.2);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #00FF87;
+    }
+
+    /* Neon Glow Text and Box */
+    .text-glow {
+      text-shadow: 0 0 20px rgba(0, 255, 135, 0.5), 0 0 40px rgba(0, 255, 135, 0.2);
+    }
+    .text-glow-subtle {
+      text-shadow: 0 0 12px rgba(0, 255, 135, 0.3);
+    }
+    .box-glow {
+      box-shadow: 0 0 35px rgba(0, 255, 135, 0.22);
+    }
+
+    /* Grid & Ambient */
+    .bg-tech-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+
+    /* Glassmorphism Cards */
+    .glass-card {
+      background: rgba(15, 20, 30, 0.7);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-card:hover {
+      border-color: rgba(0, 255, 135, 0.45);
+      transform: translateY(-4px);
+      box-shadow: 0 14px 34px -8px rgba(0, 255, 135, 0.2);
+    }
+
+    /* Interactive Spotlight on hover */
+    .card-spotlight {
+      position: relative;
+      overflow: hidden;
+    }
+    .card-spotlight::before {
+      content: '';
+      position: absolute;
+      top: var(--mouse-y, -1000px);
+      left: var(--mouse-x, -1000px);
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(0, 255, 135, 0.14) 0%, transparent 70%);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .card-spotlight:hover::before {
+      opacity: 1;
+    }
+
+    /* Animated Border */
+    .animated-border {
+      position: relative;
+      background: #0B0F17;
+      border-radius: 1.5rem;
+    }
+    .animated-border::before {
+      content: "";
+      position: absolute;
+      inset: -1.5px;
+      border-radius: inherit;
+      padding: 1.5px;
+      background: linear-gradient(90deg, #00FF87, transparent, #10B981, transparent, #00FF87);
+      background-size: 200% 100%;
+      animation: borderMove 8s linear infinite;
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+    @keyframes borderMove {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
+    }
+
+    /* Live Pulse Dot */
+    @keyframes pulseGlow {
+      0%, 100% { transform: scale(1); opacity: 0.9; }
+      50% { transform: scale(1.7); opacity: 0.3; }
+    }
+    .pulse-dot::after {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: 9999px;
+      background: #00FF87;
+      animation: pulseGlow 2s ease-in-out infinite;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body class="bg-dark-900 text-slate-200 antialiased font-sans selection:bg-lime-neon selection:text-dark-950 relative overflow-x-hidden">
+
+  <!-- Ambient Glow Background Effects -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-lime-neon/10 blur-[140px] rounded-full"></div>
+    <div class="absolute top-[40%] -left-60 w-[600px] h-[600px] bg-lime-accent/5 blur-[160px] rounded-full"></div>
+    <div class="absolute top-[75%] -right-60 w-[600px] h-[600px] bg-lime-neon/5 blur-[160px] rounded-full"></div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-5 bg-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        
+        <!-- Brand Logo (Typography with Neon Accent) -->
+        <a href="#hero" class="flex items-center gap-2 group cursor-pointer focus:outline-none">
+          <div class="w-9 h-9 rounded-xl bg-dark-850 border border-lime-neon/30 flex items-center justify-center group-hover:border-lime-neon transition-colors duration-300 shadow-neon">
+            <span class="text-lime-neon font-mono font-bold text-lg leading-none">B</span>
+          </div>
+          <div class="flex items-baseline font-mono tracking-tight text-xl font-bold">
+            <span class="text-white">Bagdar</span>
+            <span class="text-lime-neon transition-all duration-300 group-hover:text-glow">Lime</span>
+            <span class="relative w-1.5 h-1.5 rounded-full bg-lime-neon ml-1 pulse-dot"></span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+          <a href="#services" class="hover:text-lime-neon transition-colors duration-200">Услуги</a>
+          <a href="#about" class="hover:text-lime-neon transition-colors duration-200">О компании</a>
+          <a href="#process" class="hover:text-lime-neon transition-colors duration-200">Этапы работы</a>
+          <a href="#cta" class="hover:text-lime-neon transition-colors duration-200">Калькулятор</a>
+          <a href="#contacts" class="hover:text-lime-neon transition-colors duration-200">Контакты</a>
+        </nav>
+
+        <!-- Header CTA Buttons -->
+        <div class="hidden sm:flex items-center gap-4">
+          <a href="https://instagram.com/bagdarlime" target="_blank" rel="noopener noreferrer" 
+             aria-label="Instagram BagdarLime"
+             class="p-2 rounded-xl border border-white/10 hover:border-lime-neon/50 text-slate-300 hover:text-lime-neon bg-dark-850/60 backdrop-blur-md transition-all duration-200 flex items-center justify-center">
+            <img src="./public/icon_instagram.png" alt="Instagram" class="w-5 h-5 object-contain">
+          </a>
+          <a href="https://wa.me/77472470797?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20BagdarLime!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%BE%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BF%D0%BE%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B5%2F%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8." 
+             target="_blank" rel="noopener noreferrer"
+             class="group relative inline-flex items-center gap-2.5 px-5 py-2.5 rounded-xl bg-lime-neon text-dark-950 font-semibold text-sm hover:bg-[#15FFA0] transition-all duration-300 shadow-neon hover:shadow-neon-lg active:scale-95">
+            <img src="./public/icon_whatsapp.png" alt="WhatsApp" class="w-5 h-5 object-contain">
+            <span>Написать в WhatsApp</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Trigger -->
+        <div class="flex items-center gap-2 md:hidden">
+          <a href="https://wa.me/77472470797?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20BagdarLime!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%BE%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BF%D0%BE%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B5%2F%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8." 
+             target="_blank" rel="noopener noreferrer"
+             class="p-2 rounded-lg bg-lime-neon text-dark-950 font-bold text-xs flex items-center justify-center">
+            <img src="./public/icon_whatsapp.png" alt="WhatsApp" class="w-5 h-5 object-contain">
+          </a>
+          <button id="mobile-menu-btn" type="button" aria-label="Открыть меню" 
+                  class="p-2 rounded-lg bg-dark-800 border border-white/10 text-slate-200 hover:text-lime-neon">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Slide-out Menu Modal -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 hidden opacity-0 pointer-events-none transition-opacity duration-300 bg-dark-950/80 backdrop-blur-md">
+    <div class="mobile-menu-content absolute right-0 top-0 bottom-0 w-4/5 max-w-sm bg-dark-900 border-l border-white/10 p-6 flex flex-col justify-between translate-x-full transition-transform duration-300 shadow-2xl">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-white/10">
+          <div class="flex items-center gap-2 font-mono font-bold text-lg">
+            <span class="text-white">Bagdar</span><span class="text-lime-neon">Lime</span>
+          </div>
+          <button id="close-mobile-menu" type="button" aria-label="Закрыть меню" class="p-2 text-slate-400 hover:text-white">
+            <i data-lucide="x" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+        <nav class="flex flex-col gap-5 mt-8 text-lg font-medium text-slate-200">
+          <a href="#services" class="mobile-nav-link hover:text-lime-neon transition-colors">Услуги компании</a>
+          <a href="#about" class="mobile-nav-link hover:text-lime-neon transition-colors">О компании</a>
+          <a href="#process" class="mobile-nav-link hover:text-lime-neon transition-colors">Этапы работы</a>
+          <a href="#cta" class="mobile-nav-link hover:text-lime-neon transition-colors">Рассчитать стоимость</a>
+          <a href="#contacts" class="mobile-nav-link hover:text-lime-neon transition-colors">Контакты</a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-white/10 flex flex-col gap-4">
+        <a href="https://wa.me/77472470797?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20BagdarLime!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%BE%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BF%D0%BE%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B5%2F%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8." 
+           target="_blank" rel="noopener noreferrer"
+           class="w-full flex items-center justify-center gap-2.5 py-3 px-4 rounded-xl bg-lime-neon text-dark-950 font-bold text-center shadow-neon">
+          <img src="./public/icon_whatsapp.png" alt="WhatsApp" class="w-5 h-5 object-contain">
+          <span>Написать в WhatsApp</span>
+        </a>
+        <a href="https://instagram.com/bagdarlime" target="_blank" rel="noopener noreferrer" 
+           class="w-full flex items-center justify-center gap-2.5 py-3 px-4 rounded-xl border border-white/10 text-slate-300 hover:text-lime-neon text-center">
+          <img src="./public/icon_instagram.png" alt="Instagram" class="w-5 h-5 object-contain">
+          <span>Instagram: @bagdarlime</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main class="relative z-10">
+
+    <!-- БЛОК 1: HERO SECTION -->
+    <section id="hero" class="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden">
+      <!-- Interactive Neural Canvas -->
+      <canvas id="hero-canvas" class="absolute inset-0 w-full h-full pointer-events-auto opacity-75"></canvas>
+      
+      <!-- Tech Grid Overlay -->
+      <div class="absolute inset-0 bg-tech-grid opacity-30 pointer-events-none"></div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="max-w-4xl mx-auto text-center">
+          
+          <!-- High-Tech Badge -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-dark-850/80 border border-lime-neon/30 text-xs sm:text-sm font-mono text-lime-neon mb-8 shadow-neon backdrop-blur-md">
+            <span class="w-2 h-2 rounded-full bg-lime-neon animate-ping"></span>
+            <span>IT & AI РЕШЕНИЯ В КАЗАХСТАНЕ • г. АСТАНА</span>
+          </div>
+
+          <!-- Main Heading H1 -->
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.15] mb-6">
+            Разработка ПО, автоматизация бизнеса и <span class="bg-clip-text text-transparent bg-gradient-to-r from-lime-neon via-emerald-400 to-[#00FF87] text-glow-subtle">внедрение ИИ</span> в Казахстане
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="text-base sm:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto mb-10 font-normal">
+            Создаем веб-сайты, мобильные приложения и индивидуальные IT-решения под ключ для трансформации и взрывного роста вашего бизнеса.
+          </p>
+
+          <!-- Dual Call to Action Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 mb-14">
+            <!-- Primary WhatsApp Button with exact TZ specs -->
+            <a href="https://wa.me/77472470797?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20BagdarLime!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%BE%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BF%D0%BE%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B5%2F%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8." 
+               target="_blank" rel="noopener noreferrer"
+               class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-lime-neon text-dark-950 font-bold text-base hover:bg-[#15FFA0] transition-all duration-300 shadow-neon hover:shadow-neon-lg hover:-translate-y-0.5 active:translate-y-0">
+              <img src="./public/icon_whatsapp.png" alt="WhatsApp" class="w-6 h-6 object-contain">
+              <span>Рассчитать стоимость в WhatsApp</span>
+            </a>
+
+            <!-- Secondary Services Button -->
+            <a href="#services" 
+               class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-dark-850/80 hover:bg-dark-800 text-white font-semibold text-base border border-white/10 hover:border-lime-neon/50 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5">
+              <span>Наши услуги</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 text-lime-neon"></i>
+            </a>
+          </div>
+
+          <!-- Micro Trust Metrics -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto pt-8 border-t border-white/10 text-left">
+            <div class="p-3">
+              <div class="text-lime-neon font-mono font-bold text-xl sm:text-2xl mb-1">100%</div>
+              <div class="text-xs text-slate-400">Прозрачная разработка под ключ</div>
+            </div>
+            <div class="p-3">
+              <div class="text-lime-neon font-mono font-bold text-xl sm:text-2xl mb-1">AI-Ready</div>
+              <div class="text-xs text-slate-400">Интеграция ИИ & нейросетей</div>
+            </div>
+            <div class="p-3">
+              <div class="text-lime-neon font-mono font-bold text-xl sm:text-2xl mb-1">Астана</div>
+              <div class="text-xs text-slate-400">Офис & охват по всему РК</div>
+            </div>
+            <div class="p-3">
+              <div class="text-lime-neon font-mono font-bold text-xl sm:text-2xl mb-1">24/7</div>
+              <div class="text-xs text-slate-400">Поддержка и сопровождение</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- БЛОК 2: О КОМПАНИИ BAGDARLIME -->
+    <section id="about" class="py-24 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="max-w-3xl mb-16 reveal-on-scroll opacity-0 translate-y-8">
+          <div class="inline-flex items-center gap-2 text-xs font-mono tracking-widest text-lime-neon uppercase mb-3">
+            <span class="w-1.5 h-1.5 bg-lime-neon rounded-full"></span>
+            О компании BagdarLime
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-5">
+            Цифровой локомотив для казахстанского бизнеса
+          </h2>
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed">
+            <strong class="text-white font-medium">BagdarLime</strong> — инновационная IT-компания из Астаны, помогающая предпринимателям, руководителям и стартапам по всему Казахстану внедрять передовые цифровые технологии, автоматизировать рутину и получать измеримый финансовый результат с помощью искусственного интеллекта.
+          </p>
+        </div>
+
+        <!-- 3 Feature Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          
+          <!-- Card 1: Modern Tech Stack -->
+          <div class="glass-card card-spotlight rounded-2xl p-8 flex flex-col justify-between reveal-on-scroll opacity-0 translate-y-8">
+            <div>
+              <div class="w-14 h-14 rounded-xl bg-dark-850 border border-lime-neon/30 flex items-center justify-center text-lime-neon mb-6 shadow-neon">
+                <i data-lucide="cpu" class="w-7 h-7"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3">Современный стек</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Используем актуальные технологии разработки (Next.js, Python, Flutter, PWA) и передовые модели искусственного интеллекта (LLM, OpenAI, Claude, Whisper, Computer Vision).
+              </p>
+            </div>
+            <div class="flex items-center gap-2 font-mono text-xs text-lime-neon pt-4 border-t border-white/5">
+              <i data-lucide="zap" class="w-3.5 h-3.5"></i>
+              <span>High-Performance & Security</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Coverage across Kazakhstan -->
+          <div class="glass-card card-spotlight rounded-2xl p-8 flex flex-col justify-between reveal-on-scroll opacity-0 translate-y-8" style="transition-delay: 150ms;">
+            <div>
+              <div class="w-14 h-14 rounded-xl bg-dark-850 border border-lime-neon/30 flex items-center justify-center text-lime-neon mb-6 shadow-neon">
+                <i data-lucide="map-pin" class="w-7 h-7"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3">Работа по всему Казахстану</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Головной офис расположен в Астане. Проводим как очные встречи и стратегические сессии, так и организуем быстрое, прозрачное удаленное взаимодействие для клиентов из любых городов РК.
+              </p>
+            </div>
+            <div class="flex items-center gap-2 font-mono text-xs text-lime-neon pt-4 border-t border-white/5">
+              <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+              <span>г. Астана • Алматы • Все регионы</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Individual approach -->
+          <div class="glass-card card-spotlight rounded-2xl p-8 flex flex-col justify-between reveal-on-scroll opacity-0 translate-y-8" style="transition-delay: 300ms;">
+            <div>
+              <div class="w-14 h-14 rounded-xl bg-dark-850 border border-lime-neon/30 flex items-center justify-center text-lime-neon mb-6 shadow-neon">
+                <i data-lucide="workflow" class="w-7 h-7"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3">Индивидуальный подход</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Не навязываем шаблонные рамки. Проектируем архитектуру программных продуктов под конкретные регламенты, задачи и логику вашего бизнеса для максимизации конверсии и окупаемости.
+              </p>
+            </div>
+            <div class="flex items-center gap-2 font-mono text-xs text-lime-neon pt-4 border-t border-white/5">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+              <span>Индивидуальная архитектура</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- БЛОК 3: УСЛУГИ КОМПАНИИ (Ключевой блок - 6 направлений) -->
+    <section id="services" class="py-24 relative bg-dark-950/60 border-y border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll opacity-0 translate-y-8">
+          <div class="inline-flex items-center gap-2 text-xs font-mono tracking-widest text-lime-neon uppercase mb-3">
+            <span class="w-1.5 h-1.5 bg-lime-neon rounded-full"></span>
+            Направления деятельности
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4">
+            Ключевые IT & AI Услуги
+          </h2>
+          <p class="text-slate-300 text-base sm:text-lg">
+            Полный цикл разработки — от идеи и архитектурного ТЗ до промышленного запуска и внедрения искусственного интеллекта.
+          </p>
+        </div>
+
+        <!-- 6 Interactive Service Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          
+          <!-- 1. Разработка сайтов -->
+          <div class="glass-card card-spotlight rounded-2xl p-7 flex flex-col justify-between group reveal-on-scroll opacity-0 translate-y-8">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="w-12 h-12 rounded-xl bg-dark-850 border border-lime-neon/20 flex items-center justify-center text-lime-neon group-hover:border-lime-neon transition-colors duration-300 shadow-neon">
+                  <i data-lucide="code-2" class="w-6 h-6"></i>
+                </div>
+                <span class="font-mono text-xs text-slate-500">01 / WEB</span>
+              </div>
+              <h3 class="text-xl font-bold text-white group-hover:text-lime-neon transition-colors duration-200 mb-3">
+                Разработка сайтов
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Создаем скоростные, конверсионные и стильные решения любой сложности: от продающих Landing Page и корпоративных порталов до крупных интернет-магазинов (e-commerce).
+              </p>
+              <ul class="space-y-2 mb-8 text-xs text-slate-300">
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-lime-neon shrink-0"></i>
+                  <span>Landing Page с высокой конверсией</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-lime-neon shrink-0"></i>
+                  <span>Корпоративные сайты и визитки</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-lime-neon shrink-0"></i>
+                  <span>Интернет-магазины с оплатой (Kaspi, CloudPayments)</span>
+                </li>
+              </ul>
+            </div>
+            <a href="https://wa.me/77472470797?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20BagdarLime!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%BE%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BF%D0%BE%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B5%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0." 
+               target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 text-sm font-semibold text-lime-neon group-hover:text-white transition-colors duration-200">
+              <span>Обсудить разработку сайта</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"></i>
+            </a>
+          </div>
+
+          <!-- 2. Веб- и мобильные приложения -->
+          <div class="glass-card card-spotlight rounded-2xl p-7 flex flex-col justify-between group reveal-on-scroll opacity-0 translate-y-8" style="transition-delay: 100ms;">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="w-12 h-12 rounded-xl bg-dark-850 border border-lime-neon/20 flex items-center justify-center text-lime-neon group-hover:border-lime-neon transition-colors duration-300 shadow-neon">
+                  <i data-lucide="smartphone" class="w-6 h-6"></i>
+                </div>
+                <span class="font-mono text-xs text-slate-500">02 / APP</span>
+              </div>
+              <h3 class="text-xl font-bold text-white group-hover:text-lime-neon transition-colors duration-200 mb-3">
+                Веб- и мобильные приложения
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Разработка нативных и кроссплатформенных приложений (iOS / Android), удобных личных кабинетов пользователей и прогрессивных веб-приложений (PWA).
+              </p>
+              <ul class="space-y-2 mb-8 text-xs text-slate-300">
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-lime-neon shrink-0"></i>
+                  <span>iOS и Android приложения (Flutter, React Native)</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-lime-neon shrink-0"></i>
+                  <span>Личные кабинеты клиентов и сотрудников</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-lime-neon shrink-0"></i>
+                  <span>PWA с мгновенной загрузкой и офлайн-режимом</span>
+                </li>
+              </ul>
+            </div>
+            <a href="https://wa.me/77472470797?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20BagdarLime!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%BE%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BF%D0%BE%20%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%BC%20%D0%B8%20%D0%B2%D0%B5%D0%B1-%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F%D0%BC." 
+               target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 text-sm font-semibold text-lime-neon group-hover:text-white transition-colors duration-200">
+              <span>Заказать разработку приложения</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"></i>
+            </a>
+          </div>
+
+          <!-- 3. Разработка ПО -->
+          <div class="glass-card card-spotlight rounded-2xl p-7 flex flex-col justify-between group reveal-on-scroll opacity-0 translate-y-8" style="transition-delay: 200ms;">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="w-12 h-12 rounded-xl bg-dark-850 border border-lime-neon/20 flex items-center justify-center text-lime-neon group-hover:border-lime-neon transition-colors duration-300 shadow-neon">
+                  <i data-lucide="terminal" class="w-6 h-6"></i>
+                </div>
+                <span class="font-mono text-xs text-slate-500">03 / SOFTWARE</span>
+              </div>
+              <h3 class="text-xl font-bold text-white group-hover:text-lime-neon transition-colors duration-200 mb-3">
+                Разработка специализированного ПО
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Проектирование и создание надежного кастомного софта, закрывающего уникальные и нестандартные технологические потребности компании.
+              </p>
+              <ul class="space-y-2 mb-8 text-xs text-slate-300">
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-lime-neon shrink-0"></i>
+                  <span>Узкоспециализированные учетные системы</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-lime-neon shrink-0"></i>
+                  <span>Десктопные и клиент-серверные решения</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-lime-neon shrink-0"></i>
+                  <span>Безопасные базы данных и отказоустойчивые API</span>
+                </li>
+              </ul>
+            </div>
+            <a href="https://wa.me/77472470797?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20BagdarLime!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0%20%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D0%B7%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%9F%D0%9E." 
+               target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 text-sm font-semibold text-lime-neon group-hover:text-white transition-colors duration-200">
+              <span>Спроектировать ПО под бизнес</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"></i>
+            </a>
+          </div>
+
+          <!-- 4. Автоматизация бизнес-процессов -->
+          <div class="glass-card card-spotlight rounded-2xl p-7 flex flex-col justify-between group reveal-on-scroll opacity-0 translate-y-8">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="w-12 h-12 rounded-xl bg-dark-850 border border-lime-neon/20 flex items-center justify-center text-lime-neon group-hover:border-lime-neon transition-colors duration-300 shadow-neon">
+                  <i data-lucide="workflow" class="w-6 h-6"></i>
+                </div>
+                <span class="font-mono text-xs text-slate-500">04 / AUTO</span>
+              </div>
+              <h3 class="text-xl font-bold text-white group-hover:text-lime-neon transition-colors duration-200 mb-3">
+                Автоматизация бизнес-процессов
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Исключение рутины и человеческого фактора: настройка CRM/ERP, автоматические воронки, интеграции мессенджеров и умные чат-боты.
+              </p>
+              <ul class="space-y-2 mb-8 text-xs text-slate-300">
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-lime-neon shrink-0"></i>
+                  <span>Внедрение и кастомизация CRM/ERP систем</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-lime-neon shrink-0"></i>
+                  <span>Бесшовные интеграции WhatsApp, Telegram, 1С, склад</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-lime-neon shrink-0"></i>
+                  <span>Автоворонки продаж и маршрутизация лидов</span>
+                </li>
+              </ul>
+            </div>
+            <a href="https://wa.me/77472470797?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20BagdarLime!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D0%B7%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D1%8B." 
+               target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 text-sm font-semibold text-lime-neon group-hover:text-white transition-colors duration-200">
+              <span>Автоматизировать процессы</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"></i>
+            </a>
+          </div>
+
+          <!-- 5. Внедрение ИИ для бизнеса -->
+          <div class="glass-card card-spotlight rounded-2xl p-7 flex flex-col justify-between group reveal-on-scroll opacity-0 translate-y-8 relative overflow-hidden" style="transition-delay: 100ms;">
+            <div class="absolute -top-10 -right-10 w-28 h-28 bg-lime-neon/10 rounded-full blur-xl pointer-events-none"></div>
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="w-12 h-12 rounded-xl bg-dark-850 border border-lime-neon/40 flex items-center justify-center text-lime-neon group-hover:border-lime-neon transition-colors duration-300 shadow-neon">
+                  <i data-lucide="bot" class="w-6 h-6"></i>
+                </div>
+                <span class="font-mono text-xs text-lime-neon font-semibold px-2 py-0.5 rounded bg-lime-neon/10 border border-lime-neon/20">AI CORE</span>
+              </div>
+              <h3 class="text-xl font-bold text-white group-hover:text-lime-neon transition-colors duration-200 mb-3">
+                Внедрение ИИ для бизнеса
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Внедрение передовых генеративных нейросетей, обученных на корпоративной базе знаний: умные ассистенты 24/7, автоответчики в WhatsApp и предиктивная аналитика.
+              </p>
+              <ul class="space-y-2 mb-8 text-xs text-slate-300">
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-lime-neon shrink-0"></i>
+                  <span>Умные ИИ-ассистенты для продаж и техподдержки</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-lime-neon shrink-0"></i>
+                  <span>Интеграция LLM (ChatGPT / Claude) в процессы компании</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-lime-neon shrink-0"></i>
+                  <span>Автоматический анализ данных и генерация отчетов</span>
+                </li>
+              </ul>
+            </div>
+            <a href="https://wa.me/77472470797?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20BagdarLime!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B2%D0%BD%D0%B5%D0%B4%D1%80%D0%B8%D1%82%D1%8C%20%D0%98%D0%98%20%D0%B2%20%D1%81%D0%B2%D0%BE%D0%B9%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81." 
+               target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 text-sm font-semibold text-lime-neon group-hover:text-white transition-colors duration-200">
+              <span>Внедрить искусственный интеллект</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"></i>
+            </a>
+          </div>
+
+          <!-- 6. Комплексные IT & AI решения -->
+          <div class="glass-card card-spotlight rounded-2xl p-7 flex flex-col justify-between group reveal-on-scroll opacity-0 translate-y-8" style="transition-delay: 200ms;">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="w-12 h-12 rounded-xl bg-dark-850 border border-lime-neon/20 flex items-center justify-center text-lime-neon group-hover:border-lime-neon transition-colors duration-300 shadow-neon">
+                  <i data-lucide="layers" class="w-6 h-6"></i>
+                </div>
+                <span class="font-mono text-xs text-slate-500">06 / SUITE</span>
+              </div>
+              <h3 class="text-xl font-bold text-white group-hover:text-lime-neon transition-colors duration-200 mb-3">
+                Комплексные IT & AI решения
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Полная сквозная цифровизация бизнеса «под ключ»: от проектирования архитектуры до глубокой автоматизации инфраструктуры и непрерывной аналитики.
+              </p>
+              <ul class="space-y-2 mb-8 text-xs text-slate-300">
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-lime-neon shrink-0"></i>
+                  <span>Сквозная цифровая трансформация компании</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-lime-neon shrink-0"></i>
+                  <span>Единый стек: Web + Mobile + AI + CRM</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-lime-neon shrink-0"></i>
+                  <span>Выделенная инженерная команда и сопровождение</span>
+                </li>
+              </ul>
+            </div>
+            <a href="https://wa.me/77472470797?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20BagdarLime!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D1%8E%D1%82%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81%D0%BD%D1%8B%D0%B5%20IT%20%26%20AI%20%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%BF%D0%BE%D0%B4%20%D0%BA%D0%BB%D1%8E%D1%87." 
+               target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 text-sm font-semibold text-lime-neon group-hover:text-white transition-colors duration-200">
+              <span>Обсудить проект под ключ</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"></i>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- БЛОК 4: ЭТАПЫ РАБОТЫ -->
+    <section id="process" class="py-24 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll opacity-0 translate-y-8">
+          <div class="inline-flex items-center gap-2 text-xs font-mono tracking-widest text-lime-neon uppercase mb-3">
+            <span class="w-1.5 h-1.5 bg-lime-neon rounded-full"></span>
+            Прозрачный рабочий процесс
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4">
+            5 шагов от идеи до внедрения
+          </h2>
+          <p class="text-slate-300 text-base sm:text-lg">
+            Строгая инженерная методология, исключающая срывы сроков и гарантирующая предсказуемый результат.
+          </p>
+        </div>
+
+        <!-- 5 Steps Timeline Grid -->
+        <div class="relative">
+          
+          <!-- Connecting Line (Desktop) -->
+          <div class="hidden lg:block absolute top-1/2 left-4 right-4 h-0.5 bg-gradient-to-r from-lime-neon/20 via-lime-neon to-lime-neon/20 -translate-y-1/2 z-0"></div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 relative z-10">
+            
+            <!-- Step 1 -->
+            <div class="glass-card rounded-2xl p-6 relative flex flex-col justify-between reveal-on-scroll opacity-0 translate-y-8">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <span class="font-mono text-2xl font-black text-lime-neon">01</span>
+                  <div class="w-3 h-3 rounded-full bg-lime-neon shadow-neon"></div>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">Анализ и Брифинг</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">
+                  Изучаем ваши бизнес-процессы, выявляем узкие места, рассчитываем экономику проекта и формулируем конкретные задачи.
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-white/5 text-[11px] font-mono text-slate-400">
+                Результат: Четкие цели и скоуп
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="glass-card rounded-2xl p-6 relative flex flex-col justify-between reveal-on-scroll opacity-0 translate-y-8" style="transition-delay: 100ms;">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <span class="font-mono text-2xl font-black text-lime-neon">02</span>
+                  <div class="w-3 h-3 rounded-full bg-lime-neon shadow-neon"></div>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">Проектирование и ТЗ</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">
+                  Разрабатываем интерактивный прототип, детальную архитектуру данных и утверждаем пошаговый технический план.
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-white/5 text-[11px] font-mono text-slate-400">
+                Результат: Утвержденное ТЗ и смета
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="glass-card rounded-2xl p-6 relative flex flex-col justify-between reveal-on-scroll opacity-0 translate-y-8" style="transition-delay: 200ms;">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <span class="font-mono text-2xl font-black text-lime-neon">03</span>
+                  <div class="w-3 h-3 rounded-full bg-lime-neon shadow-neon"></div>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">Дизайн и Разработка</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">
+                  Создаем High-Tech UI/UX дизайн, верстаем адаптивный интерфейс и программируем быструю серверную логику.
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-white/5 text-[11px] font-mono text-slate-400">
+                Результат: Рабочий прототип системы
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="glass-card rounded-2xl p-6 relative flex flex-col justify-between reveal-on-scroll opacity-0 translate-y-8" style="transition-delay: 300ms;">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <span class="font-mono text-2xl font-black text-lime-neon">04</span>
+                  <div class="w-3 h-3 rounded-full bg-lime-neon shadow-neon"></div>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">Интеграция и ИИ</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">
+                  Подключаем автоматизацию, обучаем нейросети под ваши сценарии и проводим всестороннее нагрузочное тестирование.
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-white/5 text-[11px] font-mono text-slate-400">
+                Результат: Полностью готовый продукт
+              </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="glass-card rounded-2xl p-6 relative flex flex-col justify-between reveal-on-scroll opacity-0 translate-y-8" style="transition-delay: 400ms;">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <span class="font-mono text-2xl font-black text-lime-neon">05</span>
+                  <div class="w-3 h-3 rounded-full bg-lime-neon shadow-neon"></div>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">Запуск и Поддержка</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">
+                  Разворачиваем продукт на сервере, обучаем команду и обеспечиваем техническое сопровождение и масштабирование.
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-white/5 text-[11px] font-mono text-slate-400">
+                Результат: Запуск в бой + SLA
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- БЛОК 5: ФОРМА ЗАХВАТА / КОНВЕРСИОННЫЙ БЛОК -->
+    <section id="cta" class="py-20 relative">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="animated-border p-8 sm:p-12 lg:p-14 bg-dark-850/90 backdrop-blur-xl rounded-3xl relative overflow-hidden box-glow reveal-on-scroll opacity-0 translate-y-8">
+          
+          <div class="relative z-10 max-w-3xl mx-auto text-center">
+            
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-lime-neon/10 border border-lime-neon/30 text-xs font-mono text-lime-neon mb-6">
+              <i data-lucide="flame" class="w-3.5 h-3.5"></i>
+              <span>ОТКРЫТЫ К НОВЫМ ПРОЕКТАМ</span>
+            </div>
+
+            <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4">
+              Готовы оцифровать и автоматизировать ваш бизнес?
+            </h2>
+
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-8 max-w-2xl mx-auto">
+              Напишите нам в WhatsApp — обсудим вашу задачу, предложим варианты реализации и рассчитаем предварительный бюджет прямо сегодня.
+            </p>
+
+            <!-- Interactive Direction Picker (Generates personalized WhatsApp text) -->
+            <div class="text-left bg-dark-900/90 border border-white/10 rounded-2xl p-6 mb-8">
+              <label class="block text-xs font-mono text-slate-400 mb-3 uppercase tracking-wider">
+                Выберите интересующие направления (кликните):
+              </label>
+              
+              <div class="flex flex-wrap gap-2.5 mb-5">
+                <button type="button" data-service="Разработка сайтов" 
+                        class="service-pill px-3.5 py-1.5 rounded-xl border text-xs sm:text-sm font-medium bg-dark-800/80 text-slate-300 border-white/10 hover:border-lime-neon/40 transition-all cursor-pointer">
+                  💻 Разработка сайтов
+                </button>
+                <button type="button" data-service="Мобильные и веб-приложения" 
+                        class="service-pill px-3.5 py-1.5 rounded-xl border text-xs sm:text-sm font-medium bg-dark-800/80 text-slate-300 border-white/10 hover:border-lime-neon/40 transition-all cursor-pointer">
+                  📱 Мобильные приложения
+                </button>
+                <button type="button" data-service="Специализированное ПО" 
+                        class="service-pill px-3.5 py-1.5 rounded-xl border text-xs sm:text-sm font-medium bg-dark-800/80 text-slate-300 border-white/10 hover:border-lime-neon/40 transition-all cursor-pointer">
+                  ⚙️ Разработка ПО
+                </button>
+                <button type="button" data-service="Автоматизация CRM/ERP" 
+                        class="service-pill px-3.5 py-1.5 rounded-xl border text-xs sm:text-sm font-medium bg-dark-800/80 text-slate-300 border-white/10 hover:border-lime-neon/40 transition-all cursor-pointer">
+                  🔄 Автоматизация CRM/ERP
+                </button>
+                <button type="button" data-service="Внедрение ИИ" 
+                        class="service-pill px-3.5 py-1.5 rounded-xl border text-xs sm:text-sm font-medium bg-dark-800/80 text-slate-300 border-white/10 hover:border-lime-neon/40 transition-all cursor-pointer">
+                  🧠 Внедрение ИИ (AI)
+                </button>
+                <button type="button" data-service="Комплексные IT & AI решения" 
+                        class="service-pill active-pill px-3.5 py-1.5 rounded-xl border text-xs sm:text-sm font-medium bg-lime-neon text-dark-950 border-lime-neon shadow-neon transition-all cursor-pointer">
+                  🚀 Комплексные IT & AI решения
+                </button>
+              </div>
+
+              <div class="mb-4">
+                <input id="custom-project-note" type="text" 
+                       placeholder="Дополнительный комментарий или коротко о вашей задаче (необязательно)..."
+                       class="w-full px-4 py-3 rounded-xl bg-dark-950 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-lime-neon transition-colors">
+              </div>
+
+              <!-- Message Preview Display -->
+              <div class="p-3 rounded-xl bg-dark-950/80 border border-white/5 flex items-start gap-3">
+                <i data-lucide="terminal" class="w-4 h-4 text-lime-neon mt-0.5 shrink-0"></i>
+                <div class="text-xs font-mono text-slate-400 overflow-hidden">
+                  <span class="text-slate-500">Автоматический текст обращения в WhatsApp:</span><br>
+                  <span id="wa-message-preview" class="text-lime-neon/90 break-words">"Здравствуйте, BagdarLime! Хочу проконсультироваться по направлению: Комплексные IT & AI решения"</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Main Direct WhatsApp Button -->
+            <a id="dynamic-wa-btn" 
+               href="https://wa.me/77472470797?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20BagdarLime!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%BE%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BF%D0%BE%20%D0%BD%D0%B0%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8E%3A%20%D0%9A%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81%D0%BD%D1%8B%D0%B5%20IT%20%26%20AI%20%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F"
+               target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center justify-center gap-3 px-10 py-5 rounded-2xl bg-lime-neon text-dark-950 font-extrabold text-base sm:text-lg hover:bg-[#15FFA0] transition-all duration-300 shadow-neon-lg hover:scale-105 active:scale-95">
+              <img src="./public/icon_whatsapp.png" alt="WhatsApp" class="w-6 h-6 object-contain">
+              <span>Получить консультацию в WhatsApp</span>
+            </a>
+
+            <div class="mt-4 text-xs font-mono text-slate-400 flex items-center justify-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-lime-neon"></span>
+              <span>Прямой ответ инженера-консультанта в течение 15 минут</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- БЛОК 6: КОНТАКТЫ И ПОДВАЛ (FOOTER) -->
+    <footer id="contacts" class="pt-16 pb-12 bg-dark-950 border-t border-white/10 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+          
+          <!-- Column 1: Brand Info -->
+          <div class="lg:col-span-1">
+            <a href="#hero" class="flex items-center gap-2 group cursor-pointer mb-4">
+              <div class="w-8 h-8 rounded-lg bg-dark-850 border border-lime-neon/30 flex items-center justify-center text-lime-neon font-mono font-bold shadow-neon">
+                B
+              </div>
+              <div class="font-mono tracking-tight text-xl font-bold text-white">
+                Bagdar<span class="text-lime-neon">Lime</span>
+              </div>
+            </a>
+            <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-6">
+              IT-компания полного цикла: веб-разработка, мобильные приложения, автоматизация бизнеса и интеграция искусственного интеллекта.
+            </p>
+            <div class="flex items-center gap-3">
+              <a href="https://instagram.com/bagdarlime" target="_blank" rel="noopener noreferrer" 
+                 aria-label="Instagram BagdarLime"
+                 class="w-10 h-10 rounded-xl bg-dark-850 border border-white/10 flex items-center justify-center text-slate-300 hover:border-lime-neon/50 transition-colors">
+                <img src="./public/icon_instagram.png" alt="Instagram" class="w-5 h-5 object-contain">
+              </a>
+              <a href="https://wa.me/77472470797" target="_blank" rel="noopener noreferrer" 
+                 aria-label="WhatsApp BagdarLime"
+                 class="w-10 h-10 rounded-xl bg-dark-850 border border-white/10 flex items-center justify-center text-slate-300 hover:border-lime-neon/50 transition-colors">
+                <img src="./public/icon_whatsapp.png" alt="WhatsApp" class="w-5 h-5 object-contain">
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 2: Direct Contacts (according to TZ) -->
+          <div>
+            <h4 class="text-sm font-mono uppercase tracking-wider text-lime-neon mb-4 font-bold">Контакты</h4>
+            <ul class="space-y-3.5 text-sm text-slate-300">
+              <li class="flex items-start gap-3">
+                <i data-lucide="map-pin" class="w-4 h-4 text-lime-neon shrink-0 mt-1"></i>
+                <span>
+                  <strong class="text-white">г. Астана</strong><br>
+                  <span class="text-xs text-slate-400">Работаем по всему Казахстану</span>
+                </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <img src="./public/icon_whatsapp.png" alt="WhatsApp" class="w-4 h-4 object-contain shrink-0 mt-1">
+                <span>
+                  <span class="text-xs text-slate-400">WhatsApp (Business):</span><br>
+                  <a href="https://wa.me/77472470797" target="_blank" rel="noopener noreferrer" 
+                     class="text-white hover:text-lime-neon font-mono transition-colors">
+                    +7 (747) 247-07-97
+                  </a>
+                </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <img src="./public/icon_instagram.png" alt="Instagram" class="w-4 h-4 object-contain shrink-0 mt-1">
+                <span>
+                  <span class="text-xs text-slate-400">Instagram:</span><br>
+                  <a href="https://instagram.com/bagdarlime" target="_blank" rel="noopener noreferrer" 
+                     class="text-white hover:text-lime-neon font-mono transition-colors">
+                    @bagdarlime
+                  </a>
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Services Nav -->
+          <div>
+            <h4 class="text-sm font-mono uppercase tracking-wider text-lime-neon mb-4 font-bold">Услуги</h4>
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-400">
+              <li><a href="#services" class="hover:text-white transition-colors">Разработка сайтов</a></li>
+              <li><a href="#services" class="hover:text-white transition-colors">Веб- и мобильные приложения</a></li>
+              <li><a href="#services" class="hover:text-white transition-colors">Разработка специализированного ПО</a></li>
+              <li><a href="#services" class="hover:text-white transition-colors">Автоматизация бизнес-процессов</a></li>
+              <li><a href="#services" class="hover:text-white transition-colors">Внедрение ИИ для бизнеса</a></li>
+              <li><a href="#services" class="hover:text-white transition-colors">Комплексные IT & AI решения</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Quick Brief CTA -->
+          <div>
+            <h4 class="text-sm font-mono uppercase tracking-wider text-lime-neon mb-4 font-bold">Быстрая связь</h4>
+            <p class="text-xs text-slate-400 mb-4 leading-relaxed">
+              Есть готовое ТЗ или хотите обсудить задачу? Напишите нам прямо сейчас.
+            </p>
+            <a href="https://wa.me/77472470797?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20BagdarLime!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%BE%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%D1%81%D1%8F." 
+               target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-dark-800 border border-lime-neon/30 hover:border-lime-neon text-xs font-semibold text-lime-neon transition-all">
+              <img src="./public/icon_whatsapp.png" alt="WhatsApp" class="w-4 h-4 object-contain">
+              <span>Открыть чат WhatsApp</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Copyright -->
+        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+          <div>
+            © 2026 BagdarLime. Все права защищены.
+          </div>
+          <div class="font-mono text-slate-500">
+            г. Астана • Казахстан
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+  <!-- Floating Quick WhatsApp Action Button -->
+  <a href="https://wa.me/77472470797?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20BagdarLime!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%BE%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%D1%81%D1%8F." 
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Написать в WhatsApp"
+     class="fixed bottom-6 right-6 z-40 p-3 rounded-2xl bg-dark-850/90 border border-lime-neon/40 shadow-neon hover:shadow-neon-lg hover:scale-110 active:scale-95 transition-all duration-300 flex items-center gap-2.5 group backdrop-blur-md">
+    <img src="./public/icon_whatsapp.png" alt="WhatsApp" class="w-8 h-8 object-contain drop-shadow">
+    <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300 text-xs font-semibold text-white pr-1">Чат в WhatsApp</span>
+  </a>
+
+  </main>
+
+  <!-- Interactive Scripts & Neural Canvas Engine -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Initialize Lucide Icons
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+
+      // 2. Initialize Interactive Canvas
+      initNeuralCanvas();
+
+      // 3. Setup Spotlight Cards
+      setupSpotlight();
+
+      // 4. Setup Mobile Menu
+      setupMobileMenu();
+
+      // 5. Setup Sticky Header
+      setupHeaderScroll();
+
+      // 6. Setup Interactive WhatsApp Link Builder
+      setupWhatsAppBuilder();
+
+      // 7. Setup Smooth Scroll Animations
+      setupScrollAnimations();
+    });
+
+    /**
+     * Interactive Neural Network Canvas in Hero Section
+     */
+    function initNeuralCanvas() {
+      const canvas = document.getElementById('hero-canvas');
+      if (!canvas) return;
+
+      const ctx = canvas.getContext('2d');
+      let width = (canvas.width = window.innerWidth);
+      let height = (canvas.height = window.innerHeight);
+
+      const particleCount = Math.min(Math.floor((width * height) / 14000), 75);
+      const connectionDistance = 140;
+      const mouseConnectionDistance = 180;
+      const particles = [];
+      const mouse = { x: -1000, y: -1000, radius: 180, active: false };
+
+      const colors = [
+        'rgba(0, 255, 135, 0.8)',
+        'rgba(16, 185, 129, 0.7)',
+        'rgba(52, 211, 153, 0.6)',
+        'rgba(255, 255, 255, 0.6)'
+      ];
+
+      class Particle {
+        constructor() {
+          this.x = Math.random() * width;
+          this.y = Math.random() * height;
+          this.vx = (Math.random() - 0.5) * 0.7;
+          this.vy = (Math.random() - 0.5) * 0.7;
+          this.radius = Math.random() * 2 + 1.2;
+          this.color = colors[Math.floor(Math.random() * colors.length)];
+          this.pulseSpeed = 0.02 + Math.random() * 0.03;
+          this.pulseVal = Math.random() * Math.PI;
+          this.packetProgress = 0;
+          this.hasPacket = Math.random() > 0.6;
+        }
+
+        update() {
+          this.x += this.vx;
+          this.y += this.vy;
+
+          if (this.x < -20) this.x = width + 20;
+          if (this.x > width + 20) this.x = -20;
+          if (this.y < -20) this.y = height + 20;
+          if (this.y > height + 20) this.y = -20;
+
+          this.pulseVal += this.pulseSpeed;
+
+          if (mouse.active) {
+            const dx = mouse.x - this.x;
+            const dy = mouse.y - this.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+
+            if (dist < mouse.radius) {
+              const force = (1 - dist / mouse.radius) * 1.5;
+              this.x += (dx / dist) * force;
+              this.y += (dy / dist) * force;
+            }
+          }
+
+          if (this.hasPacket) {
+            this.packetProgress += 0.008;
+            if (this.packetProgress > 1) this.packetProgress = 0;
+          }
+        }
+
+        draw() {
+          const currentRadius = this.radius + Math.sin(this.pulseVal) * 0.5;
+
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, currentRadius * 2.5, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(0, 255, 135, 0.08)';
+          ctx.fill();
+
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, currentRadius, 0, Math.PI * 2);
+          ctx.fillStyle = this.color;
+          ctx.fill();
+        }
+      }
+
+      window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      });
+
+      window.addEventListener('mousemove', (e) => {
+        const rect = canvas.getBoundingClientRect();
+        if (e.clientY < rect.bottom && e.clientY > rect.top) {
+          mouse.x = e.clientX;
+          mouse.y = e.clientY - rect.top;
+          mouse.active = true;
+        } else {
+          mouse.active = false;
+        }
+      });
+
+      window.addEventListener('mouseleave', () => { mouse.active = false; });
+      window.addEventListener('touchmove', (e) => {
+        if (e.touches.length > 0) {
+          const rect = canvas.getBoundingClientRect();
+          mouse.x = e.touches[0].clientX;
+          mouse.y = e.touches[0].clientY - rect.top;
+          mouse.active = true;
+        }
+      }, { passive: true });
+      window.addEventListener('touchend', () => { mouse.active = false; });
+
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+      }
+
+      let isVisible = true;
+      const heroSection = document.getElementById('hero');
+      if (heroSection && 'IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          isVisible = entries[0].isIntersecting;
+        }, { threshold: 0.05 });
+        observer.observe(heroSection);
+      }
+
+      function render() {
+        if (isVisible) {
+          ctx.clearRect(0, 0, width, height);
+
+          for (let i = 0; i < particles.length; i++) {
+            const p1 = particles[i];
+
+            for (let j = i + 1; j < particles.length; j++) {
+              const p2 = particles[j];
+              const dx = p1.x - p2.x;
+              const dy = p1.y - p2.y;
+              const dist = Math.sqrt(dx * dx + dy * dy);
+
+              if (dist < connectionDistance) {
+                const alpha = (1 - dist / connectionDistance) * 0.28;
+                ctx.beginPath();
+                ctx.moveTo(p1.x, p1.y);
+                ctx.lineTo(p2.x, p2.y);
+                ctx.strokeStyle = `rgba(0, 255, 135, ${alpha})`;
+                ctx.lineWidth = 0.9;
+                ctx.stroke();
+
+                if (p1.hasPacket && dist < 100) {
+                  const px = p1.x + (p2.x - p1.x) * p1.packetProgress;
+                  const py = p1.y + (p2.y - p1.y) * p1.packetProgress;
+                  ctx.beginPath();
+                  ctx.arc(px, py, 1.8, 0, Math.PI * 2);
+                  ctx.fillStyle = '#FFFFFF';
+                  ctx.shadowColor = '#00FF87';
+                  ctx.shadowBlur = 8;
+                  ctx.fill();
+                  ctx.shadowBlur = 0;
+                }
+              }
+            }
+
+            if (mouse.active) {
+              const dx = p1.x - mouse.x;
+              const dy = p1.y - mouse.y;
+              const dist = Math.sqrt(dx * dx + dy * dy);
+
+              if (dist < mouseConnectionDistance) {
+                const alpha = (1 - dist / mouseConnectionDistance) * 0.45;
+                ctx.beginPath();
+                ctx.moveTo(p1.x, p1.y);
+                ctx.lineTo(mouse.x, mouse.y);
+                ctx.strokeStyle = `rgba(0, 255, 135, ${alpha})`;
+                ctx.lineWidth = 1.2;
+                ctx.stroke();
+              }
+            }
+
+            p1.update();
+            p1.draw();
+          }
+        }
+        requestAnimationFrame(render);
+      }
+      render();
+    }
+
+    /**
+     * Mouse Spotlight Hover
+     */
+    function setupSpotlight() {
+      document.querySelectorAll('.card-spotlight').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+          card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+        });
+      });
+    }
+
+    /**
+     * Mobile Menu
+     */
+    function setupMobileMenu() {
+      const btn = document.getElementById('mobile-menu-btn');
+      const close = document.getElementById('close-mobile-menu');
+      const menu = document.getElementById('mobile-menu');
+      if (!btn || !menu) return;
+
+      function toggle(open) {
+        if (open) {
+          menu.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+          setTimeout(() => {
+            menu.classList.remove('opacity-0', 'pointer-events-none');
+            menu.querySelector('.mobile-menu-content')?.classList.remove('translate-x-full');
+          }, 10);
+        } else {
+          menu.classList.add('opacity-0', 'pointer-events-none');
+          menu.querySelector('.mobile-menu-content')?.classList.add('translate-x-full');
+          document.body.style.overflow = '';
+          setTimeout(() => menu.classList.add('hidden'), 300);
+        }
+      }
+
+      btn.addEventListener('click', () => toggle(true));
+      close?.addEventListener('click', () => toggle(false));
+      document.querySelectorAll('.mobile-nav-link').forEach(l => l.addEventListener('click', () => toggle(false)));
+    }
+
+    /**
+     * Sticky Header Scroll
+     */
+    function setupHeaderScroll() {
+      const header = document.getElementById('main-header');
+      if (!header) return;
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 40) {
+          header.classList.add('bg-dark-900/90', 'backdrop-blur-md', 'border-b', 'border-white/10', 'py-3.5', 'shadow-lg');
+          header.classList.remove('bg-transparent', 'py-5');
+        } else {
+          header.classList.remove('bg-dark-900/90', 'backdrop-blur-md', 'border-b', 'border-white/10', 'py-3.5', 'shadow-lg');
+          header.classList.add('bg-transparent', 'py-5');
+        }
+      }, { passive: true });
+    }
+
+    /**
+     * Interactive Service Selector & WhatsApp URL Builder
+     */
+    function setupWhatsAppBuilder() {
+      const pills = document.querySelectorAll('.service-pill');
+      const noteInput = document.getElementById('custom-project-note');
+      const waBtn = document.getElementById('dynamic-wa-btn');
+      const preview = document.getElementById('wa-message-preview');
+      const phone = '77472470797';
+
+      let selected = ['Комплексные IT & AI решения'];
+
+      function update() {
+        let msg = 'Здравствуйте, BagdarLime! Хочу проконсультироваться';
+        if (selected.length > 0) {
+          msg += ` по направлению: ${selected.join(', ')}`;
+        }
+        const note = noteInput ? noteInput.value.trim() : '';
+        if (note) {
+          msg += `. Детали: ${note}`;
+        }
+        const encoded = encodeURIComponent(msg);
+        if (waBtn) waBtn.href = `https://wa.me/${phone}?text=${encoded}`;
+        if (preview) preview.textContent = `"${msg}"`;
+      }
+
+      pills.forEach(p => {
+        p.addEventListener('click', () => {
+          const val = p.getAttribute('data-service');
+          if (!val) return;
+
+          if (p.classList.contains('active-pill')) {
+            if (selected.length > 1) {
+              selected = selected.filter(s => s !== val);
+              p.classList.remove('active-pill', 'bg-lime-neon', 'text-dark-950', 'border-lime-neon', 'shadow-neon');
+              p.classList.add('bg-dark-800/80', 'text-slate-300', 'border-white/10');
+            }
+          } else {
+            selected.push(val);
+            p.classList.add('active-pill', 'bg-lime-neon', 'text-dark-950', 'border-lime-neon', 'shadow-neon');
+            p.classList.remove('bg-dark-800/80', 'text-slate-300', 'border-white/10');
+          }
+          update();
+        });
+      });
+
+      if (noteInput) {
+        noteInput.addEventListener('input', update);
+      }
+      update();
+    }
+
+    /**
+     * Scroll Reveal
+     */
+    function setupScrollAnimations() {
+      const items = document.querySelectorAll('.reveal-on-scroll');
+      if (!('IntersectionObserver' in window)) {
+        items.forEach(el => el.classList.remove('opacity-0', 'translate-y-8'));
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove('opacity-0', 'translate-y-8');
+            entry.target.classList.add('opacity-100', 'translate-y-0');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+      items.forEach(el => {
+        el.classList.add('transition-all', 'duration-700', 'ease-out');
+        observer.observe(el);
+      });
+    }
+  </script>
+</body>
+</html>
