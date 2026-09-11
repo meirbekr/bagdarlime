@@ -200,7 +200,7 @@
   </div>
 
   <!-- NAVIGATION BAR -->
-  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-5 bg-transparent">
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 bg-dark-950/70 backdrop-blur-md border-b border-white/5">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between">
         
@@ -216,13 +216,13 @@
           </div>
         </a>
 
-        <!-- Desktop Navigation -->
-        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-          <a href="#services" class="hover:text-lime-neon transition-colors duration-200">Услуги</a>
-          <a href="#about" class="hover:text-lime-neon transition-colors duration-200">О компании</a>
-          <a href="#process" class="hover:text-lime-neon transition-colors duration-200">Этапы работы</a>
-          <a href="#cta" class="hover:text-lime-neon transition-colors duration-200">Калькулятор</a>
-          <a href="#contacts" class="hover:text-lime-neon transition-colors duration-200">Контакты</a>
+        <!-- Desktop Navigation (High-Contrast Glass Dock) -->
+        <nav class="hidden md:flex items-center gap-1.5 text-sm font-medium bg-dark-850/90 backdrop-blur-xl px-3 py-1.5 rounded-2xl border border-white/10 shadow-lg">
+          <a href="#services" class="px-3.5 py-1.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-200">Услуги</a>
+          <a href="#about" class="px-3.5 py-1.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-200">О компании</a>
+          <a href="#process" class="px-3.5 py-1.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-200">Этапы работы</a>
+          <a href="#cta" class="px-3.5 py-1.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-200">Калькулятор</a>
+          <a href="#contacts" class="px-3.5 py-1.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/10 transition-all duration-200">Контакты</a>
         </nav>
 
         <!-- Header CTA Buttons -->
@@ -271,11 +271,11 @@
         </div>
 
         <nav class="flex flex-col gap-5 mt-8 text-lg font-medium text-slate-200">
-          <a href="#services" class="mobile-nav-link hover:text-lime-neon transition-colors">Услуги компании</a>
-          <a href="#about" class="mobile-nav-link hover:text-lime-neon transition-colors">О компании</a>
-          <a href="#process" class="mobile-nav-link hover:text-lime-neon transition-colors">Этапы работы</a>
-          <a href="#cta" class="mobile-nav-link hover:text-lime-neon transition-colors">Рассчитать стоимость</a>
-          <a href="#contacts" class="mobile-nav-link hover:text-lime-neon transition-colors">Контакты</a>
+          <a href="#services" class="mobile-nav-link hover:text-white hover:translate-x-1.5 transition-all">Услуги компании</a>
+          <a href="#about" class="mobile-nav-link hover:text-white hover:translate-x-1.5 transition-all">О компании</a>
+          <a href="#process" class="mobile-nav-link hover:text-white hover:translate-x-1.5 transition-all">Этапы работы</a>
+          <a href="#cta" class="mobile-nav-link hover:text-white hover:translate-x-1.5 transition-all">Рассчитать стоимость</a>
+          <a href="#contacts" class="mobile-nav-link hover:text-white hover:translate-x-1.5 transition-all">Контакты</a>
         </nav>
       </div>
 
@@ -1288,12 +1288,12 @@
       if (!header) return;
 
       window.addEventListener('scroll', () => {
-        if (window.scrollY > 40) {
-          header.classList.add('bg-dark-900/90', 'backdrop-blur-md', 'border-b', 'border-white/10', 'py-3.5', 'shadow-lg');
-          header.classList.remove('bg-transparent', 'py-5');
+        if (window.scrollY > 30) {
+          header.classList.add('bg-dark-950/95', 'py-3', 'shadow-2xl', 'border-white/10');
+          header.classList.remove('bg-dark-950/70', 'py-4', 'border-white/5');
         } else {
-          header.classList.remove('bg-dark-900/90', 'backdrop-blur-md', 'border-b', 'border-white/10', 'py-3.5', 'shadow-lg');
-          header.classList.add('bg-transparent', 'py-5');
+          header.classList.remove('bg-dark-950/95', 'py-3', 'shadow-2xl', 'border-white/10');
+          header.classList.add('bg-dark-950/70', 'py-4', 'border-white/5');
         }
       }, { passive: true });
     }
